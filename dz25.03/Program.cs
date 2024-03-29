@@ -51,14 +51,14 @@ class Program
         Originator originator = new Originator();
         Caretaker caretaker = new Caretaker();
 
-        // Змінюємо стан та зберігаємо знімок
+
         originator.State = "Стан 1";
         caretaker.Memento = originator.SaveStateToMemento();
 
-        // Змінюємо стан ще раз
+
         originator.State = "Стан 2";
 
-        // Відновлюємо попередній стан
+
         originator.GetStateFromMemento(caretaker.Memento);
     }
 }
